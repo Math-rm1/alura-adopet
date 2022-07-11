@@ -1,3 +1,3 @@
-export default function Header() {
-  return <div>Header</div>
+export default function Button() {
+  return <button>Button</button>
 }
