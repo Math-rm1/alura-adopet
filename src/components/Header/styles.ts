@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const StyledHeader = styled.header`
   max-width: 80%;
+  min-width: 250px;
   height: 120px;
 
   margin: 0 auto;
@@ -9,6 +10,11 @@ export const StyledHeader = styled.header`
 
   display: flex;
   align-items: center;
+
+  // media
+  @media (min-width: 768px) {
+    max-width: 90%;
+  }
 
   &::before {
     content: '';
@@ -18,7 +24,13 @@ export const StyledHeader = styled.header`
     height: 100%;
     width: 100%;
     z-index: -1;
-    background: url('src/assets/Forma-1.svg') 0 0 no-repeat;
+
+    background: url('src/assets/Forma-1-sm.svg') 0 0 no-repeat;
+    transition: background-image 0.2s ease-in-out;
+    // media
+    @media (min-width: 768px) {
+      background: url('src/assets/Forma-1-md.svg') 0 0 no-repeat;
+    }
   }
 `
 
